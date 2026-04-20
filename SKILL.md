@@ -1047,9 +1047,9 @@ Identify from the ACTUAL RESEARCH OUTPUT:
 
 ## THEN: Show Summary + Invite Vision
 
-### TWO HARD RULES FOR LINKS — read both before writing anything
+### OUTPUT CONTRACT — six hard rules, read all of them before writing anything
 
-There are exactly two rules about links in the synthesis. They are equally important. A correct output satisfies BOTH on the first pass. These rules are complementary, not alternatives — do not collapse them into one prohibition.
+The synthesis output has six structural rules. They are a SET, not a priority order. A correct output satisfies ALL SIX on the first pass. Satisfying some by violating others is a bug, not a compromise. Each rule below has the same force as the next — do not elevate any one over the others.
 
 **RULE A — REQUIRED: Inline markdown links on every citation.**
 Every @handle, r/subreddit, publication, YouTube channel, TikTok creator, Instagram creator, and Polymarket market cited in the narrative body, KEY PATTERNS, and stats block MUST be an inline markdown link `[text](url)` at first mention. The URL comes from the raw research dump — every source item in the engine output carries its URL. First-pass synthesis MUST include these inline links; do not wait for the user to ask.
@@ -1057,20 +1057,33 @@ Every @handle, r/subreddit, publication, YouTube channel, TikTok creator, Instag
 **RULE B — FORBIDDEN: Trailing list of links.**
 No trailing list of links appears anywhere after the invitation. No `Sources:` block, no `References:` block, no `Further reading:` block, no `Citations:` block, no bulleted list of publication names, no closing "I have all the links... Just ask." sentence, no markdown-link list under any heading. The narrative's inline links (RULE A) ARE the source list — duplicating them into a trailing block is a bug.
 
-**These two rules work together.** RULE A makes every source clickable in place. RULE B prevents duplication. If you satisfy RULE B by stripping links entirely, you have violated RULE A. If you satisfy RULE A by dumping a trailing list, you have violated RULE B. Both on first pass.
+**RULE C — REQUIRED: Bold headline per narrative paragraph.**
+Every paragraph in "What I learned" opens with a bold headline phrase followed by a dash and the body text. Pattern: `**Headline phrase** — body text describing what people are saying...`. No plain-prose openers. No "Story 1 / Story 2 / Story 3" numbered sections. No unnumbered headings-as-pseudo-paragraphs. The bold headline IS the paragraph opener.
+
+**RULE D — REQUIRED: Stats block uses the exact template, tree, and emoji.**
+The stats block opens with the line `✅ All agents reported back!` on its own. Every active source is a line using the `├─` or `└─` tree character with its emoji prefix (🟠 Reddit, 🔵 X, 🔴 YouTube, 🎵 TikTok, 📸 Instagram, 🧵 Threads, 📌 Pinterest, 🟡 HN, 🦋 Bluesky, 🇺🇸 Truth Social, 🐙 GitHub, 📊 Polymarket, 🌐 Web, 🗣️ Top voices, 📎 Raw results). Use `│` for within-line separators. NO plain `-` bullets. NO plain "Stats" heading. NO missing emoji. Sources that returned 0 results are omitted entirely — do not include them as "0 threads" or "(no results this cycle)".
+
+**RULE E — REQUIRED: QUERY_TYPE-specific invitation with example follow-ups.**
+The closing invitation matches the detected QUERY_TYPE (PROMPTING / RECOMMENDATIONS / NEWS / COMPARISON / GENERAL) verbatim from the five variants defined below. Each variant includes 2-3 specific example follow-ups drawn from THIS run's research (not generic). A flat "I am now an expert on {TOPIC}" with no examples is a regression — it means you skipped the variant template.
+
+**RULE F — REQUIRED: `---` horizontal-rule separators.**
+Use `---` on its own line before the stats block (between the narrative/KEY PATTERNS and the `✅ All agents reported back!` line) and again between the stats block and the invitation. The separators are part of the template, not decoration.
+
+**All six rules apply on first pass.** If you satisfy RULES A and B by stripping structure, you have violated C/D/E/F. If you satisfy C/D/E/F by skipping links, you have violated A. Satisfy all six, or the output is wrong. Not "mostly right" — wrong.
 
 ### PRE-SYNTHESIS COMMIT — do this before drafting
 
-Before you write a single word of the synthesis:
+Before you write a single word of the synthesis, commit to every rule in the OUTPUT CONTRACT:
 
-1. Confirm the raw research dump is in hand and includes URLs on source items (it does — every engine item carries a URL).
-2. Identify every source you intend to cite in the narrative: @handles, r/subs, publications, YouTube channels, TikTok/Instagram creators, Polymarket markets.
-3. For each, find the URL in the raw data. If a URL is genuinely missing for a specific source, note it for plain-text fallback on that citation only.
-4. Commit: every citation at first mention will be wrapped as `[text](url)`. This is RULE A.
-5. Commit: no trailing list of links will be emitted. The output ends at the QUERY_TYPE-specific invitation. This is RULE B.
-6. Only now begin drafting.
+1. **Template (RULE E).** Identify the QUERY_TYPE for this run. Locate the matching invitation variant (PROMPTING / RECOMMENDATIONS / NEWS / COMPARISON / GENERAL) below. Commit to using that variant verbatim at the close, with 2-3 example follow-ups drawn from this specific research.
+2. **Headlines (RULE C).** Commit to opening every narrative paragraph with a bold `**Headline phrase** —`. No "Story 1 / Story 2 / Story 3" or other plain-prose patterns.
+3. **Stats template (RULE D).** Commit to the `✅ All agents reported back!` opening line, the `├─` / `└─` / `│` tree characters, and an emoji prefix on every active source line. Copy the template block below literally; do not rewrite it as a bullet list.
+4. **Separators (RULE F).** Commit to `---` horizontal rules before and after the stats block.
+5. **Sources (RULE A).** The raw research dump is in hand and includes URLs on every source item. Identify every source you intend to cite: @handles, r/subs, publications, YouTube channels, TikTok/Instagram creators, Polymarket markets. Pull URLs. Plan to wrap each at first mention as `[text](url)`. For any specific source with no URL in raw data, note the plain-text fallback.
+6. **No trailing list (RULE B).** Confirm no Sources/References/bulleted-list block will appear after the invitation.
+7. **Only now begin drafting.**
 
-This commit is a forcing function, not a checklist to audit after the fact. Do it before drafting.
+This commit is a forcing function, not a post-hoc checklist. Work through all seven steps before writing any prose.
 
 ---
 
@@ -1351,16 +1364,17 @@ For `/last30days war in Iran` (NEWS):
 
 **Before you display the synthesis to the user, verify ALL of the following. If any check fails AND the underlying data supports fixing it, regenerate the synthesis ONCE with the missing elements. If the data itself is absent (e.g., no Polymarket markets on this topic), skip that check silently.**
 
-1. **Bold headlines present.** Every narrative paragraph in "What I learned" starts with `**Headline phrase** —`. If any paragraph opens with plain prose, regenerate with bold headlines.
-2. **Per-source emoji headers in the stats footer.** Every active source returned by the engine has a `├─` or `└─` line with its emoji, counts, and engagement numbers. No active source is silently dropped; no source with 0 results is displayed.
+1. **RULE C — bold headlines count.** Count `**` bold-headline openers in "What I learned". Expect at least 3 (one per narrative paragraph). If 0 or 1, the agent wrote plain-prose "Story 1/2/3"-style sections instead — regenerate with `**Headline phrase** — body` on every paragraph.
+2. **RULE D — stats block tree and emoji count.** The stats block must open with `✅ All agents reported back!`. Count `├─` occurrences — expect at least 3. Count emoji-prefixed source lines (🟠🔵🔴🎵📸🧵📌🟡🦋🇺🇸🐙📊🌐🗣️📎) — expect one per active source. If the stats block is a plain "Stats" heading with `-` bullets or is missing the ✅ line, regenerate with the template block copied literally.
 3. **Quoted highlights where evidence supports them.** For YouTube items with transcripts and Reddit/X items with fun/highlight quotes, at least 2 verbatim quotes appear in the synthesis. Attributed to the channel/commenter/subreddit.
 4. **Polymarket block present if markets were returned.** If the engine surfaced Polymarket markets, the synthesis includes specific percentages and directional movement. If no markets were surfaced, skip.
-5. **Coverage footer matches the actual output.** `✅ All agents reported back!` line followed by per-source `├─`/`└─` tree exactly as the engine provided.
-6. **RULE B — no trailing list of links.** The output ends at the QUERY_TYPE-specific invitation. Nothing below it. Not a `Sources:`, not a `References:`, not `Further reading:`, not `Citations:`, not any bulleted list of URLs or publication names, not a markdown-link list under any heading, not a closing "I have all the links..." sentence. Every source is already a blue CMD-clickable inline link in the narrative and stats — no trailing list is needed.
-7. **RULE A — inline links present on first pass.** Count the `[text](url)` markdown links in the narrative body and KEY PATTERNS. If the raw research had URLs for cited sources (it almost always does — every engine item carries a URL) and the narrative has ZERO inline links, regenerate WITH inline links on every @handle, r/sub, publication, and Polymarket market at first mention. This is the specific regression repair — stripping links does NOT satisfy RULE B, it violates RULE A.
-8. **No raw URL strings anywhere (RULE A corollary).** Scan the full output for `http://` or `https://` substrings. If any appear outside a markdown link `[text](url)`, regenerate with the URL wrapped as a link.
-9. **Every citation is a markdown link or a clean plain-text fallback.** No broken empty links like `[Rolling Stone]()` or `[@handle]()`. If a URL was available in the raw data, it's wrapped; if genuinely missing for a specific source, that source's name appears as plain text — but the default for every source is a markdown link.
-10. **Research protocol was followed.** On WebSearch platforms, the command you ran used `--emit=compact --plan 'QUERY_PLAN_JSON'` with resolved handles/subreddits/hashtags. If you took the degraded path (`--emit md`, no plan, no flags), the synthesis will almost certainly fail checks 1-3 — regenerate by returning to Step 0.55 and running the full protocol.
+5. **RULE F — `---` separators present.** Count `---` horizontal rules. Expect at least one before the stats block (between narrative/KEY PATTERNS and the ✅ line) and one between the stats block and the invitation. If zero, add them.
+6. **RULE E — QUERY_TYPE-specific invitation.** The closing block matches one of the five variants (PROMPTING / RECOMMENDATIONS / NEWS / COMPARISON / GENERAL) and includes 2-3 example follow-ups drawn from this specific run. A flat "I am now an expert on {TOPIC}" with no examples is a regression — regenerate with the correct variant.
+7. **RULE B — no trailing list of links.** The output ends at the QUERY_TYPE-specific invitation. Nothing below it. Not a `Sources:`, not a `References:`, not `Further reading:`, not `Citations:`, not any bulleted list of URLs or publication names, not a markdown-link list under any heading, not a closing "I have all the links..." sentence. Every source is already a blue CMD-clickable inline link in the narrative and stats — no trailing list is needed.
+8. **RULE A — inline links count.** Count the `[text](url)` markdown links in the narrative body and KEY PATTERNS. If the raw research had URLs for cited sources (it almost always does — every engine item carries a URL) and the narrative has ZERO inline links, regenerate WITH inline links on every @handle, r/sub, publication, and Polymarket market at first mention. Stripping links does NOT satisfy RULE B, it violates RULE A.
+9. **No raw URL strings anywhere (RULE A corollary).** Scan the full output for `http://` or `https://` substrings. If any appear outside a markdown link `[text](url)`, regenerate with the URL wrapped as a link.
+10. **Every citation is a markdown link or a clean plain-text fallback.** No broken empty links like `[Rolling Stone]()` or `[@handle]()`. If a URL was available in the raw data, it's wrapped; if genuinely missing for a specific source, that source's name appears as plain text — but the default for every source is a markdown link.
+11. **Research protocol was followed.** On WebSearch platforms, the command you ran used `--emit=compact --plan 'QUERY_PLAN_JSON'` with resolved handles/subreddits/hashtags. If you took the degraded path (`--emit md`, no plan, no flags), the synthesis will almost certainly fail checks 1-3 — regenerate by returning to Step 0.55 and running the full protocol.
 
 **Max ONE regeneration.** If the regenerated output still fails the self-check, display the best version you have and note to the user which check(s) the data could not satisfy, so they can re-run or adjust their query.
 

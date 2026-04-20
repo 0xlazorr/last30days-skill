@@ -4,9 +4,7 @@ The AI world reinvents itself every month. This skill keeps you current.
 
 ## 2026-04-20 — Clickable source links
 
-Every cited source in the synthesis (X handles, subreddits, publications, YouTube channels, Polymarket markets) now renders as a blue CMD-clickable markdown link in the terminal. No raw URL strings — just clean link text you can click straight through to the source. Works in Claude Code on any terminal that supports OSC 8 hyperlinks (Ghostty, iTerm, Warp, others).
-
-The skill follows two hard rules: inline links required on every citation, no trailing list of links anywhere. Both fire on first pass — no need to ask twice.
+Every cited source in the synthesis (X handles, subreddits, publications, YouTube channels, Polymarket markets) now renders as a blue CMD-clickable markdown link in the terminal. No raw URL strings, no trailing list of links, and the rest of the output contract is preserved intact — bold headline paragraphs, `├─` `└─` emoji stats tree, and the QUERY_TYPE-specific invitation all render correctly on first pass. Works in Claude Code on any terminal that supports OSC 8 hyperlinks (Ghostty, iTerm, Warp, others).
 
 Credit to [@jay_k](https://x.com/jay_k) for surfacing the missing link-back in the reply thread, and to [@photomatt](https://x.com/photomatt) for confirming CMD-click works in Claude Code — that was the nudge to flip the rule.
 
