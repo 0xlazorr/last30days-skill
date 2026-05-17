@@ -158,7 +158,7 @@ The schedule field stored on each topic is metadata - the actual cron / Task Sch
 
 ### `briefing.py` - daily / weekly digests
 
-[`scripts/briefing.py`](skills/last30days/scripts/briefing.py) reads the SQLite store and emits structured data the agent then synthesizes into prose. Modes: `generate` (daily), `generate --weekly`. Briefs save to `~/.local/share/last30days/briefs/`.
+[`scripts/briefing.py`](skills/last30days/scripts/briefing.py) reads the SQLite store and emits structured data the agent then synthesizes into prose. Modes: `generate` (daily), `generate --weekly`, `show [--date DATE]` (display a saved briefing). Briefs save to `~/.local/share/last30days/briefs/`.
 
 ### Recommended cadence pattern
 
