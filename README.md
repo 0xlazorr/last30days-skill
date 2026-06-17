@@ -119,6 +119,13 @@ What's in the file: badge, inline metadata line, the model's synthesis verbatim 
 
 For direct CLI use without the model in the loop, the engine also accepts `--synthesis-file PATH` to convert any markdown synthesis to HTML.
 
+### Standalone Web Dashboard (Companion Project)
+
+For a beautiful visual reading experience, you can explore your research briefings using the standalone companion web dashboard:
+*   **Repository**: [0xlazorr/Last30DaysWeb](https://github.com/0xlazorr/Last30DaysWeb)
+*   **Features**: Visual display of evidence clusters, Chart.js source coverage doughnut charts, interactive star ratings saved locally, and a browser-based console runner to initiate new research runs.
+*   **How to use**: Save reports to the default `~/Documents/Last30Days` directory (via the `--save-dir` flag or `LAST30DAYS_MEMORY_DIR` env variable) and start the local Node.js dashboard server to view them.
+
 ### Intelligent search: the killer feature
 
 The v3 engine doesn't just search for your topic. It figures out *where* to search before the search begins. Type "OpenClaw" and the engine resolves @steipete (Peter Steinberger, the creator), r/openclaw, r/ClaudeCode, and the right YouTube channels and TikTok hashtags - all via a new Python pre-research brain built by [@j-sperling](https://github.com/j-sperling). The old engine searched keywords. The new engine understands your topic first, then searches the right people and communities.
