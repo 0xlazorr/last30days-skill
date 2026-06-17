@@ -124,7 +124,7 @@ For direct CLI use without the model in the loop, the engine also accepts `--syn
 For a beautiful visual reading experience, you can explore your research briefings using the standalone companion web dashboard:
 *   **Repository**: [0xlazorr/Last30DaysWeb](https://github.com/0xlazorr/Last30DaysWeb)
 *   **Features**: Visual display of evidence clusters, Chart.js source coverage doughnut charts, interactive star ratings saved locally, and a browser-based console runner to initiate new research runs.
-*   **How to use**: Save reports to the default `~/Documents/Last30Days` directory (via the `--save-dir` flag or `LAST30DAYS_MEMORY_DIR` env variable) and start the local Node.js dashboard server to view them.
+*   **How to use**: Save reports to the directory where `LAST30DAYS_MEMORY_DIR` defaults to `~/Documents/Last30Days` (via the `--save-dir` flag or env variable) and start the local Node.js dashboard server to view them.
 
 ### Intelligent search: the killer feature
 
