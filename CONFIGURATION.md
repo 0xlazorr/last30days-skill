@@ -311,7 +311,7 @@ This is the right home for client-specific changes you don't intend to upstream 
 
 ## Companion Web Dashboard
 
-For a premium visual reading experience, you can explore your research briefings using the standalone community companion web dashboard project at **[Last30DaysWeb](https://github.com/0xlazorr/Last30DaysWeb)**.
+For a premium visual reading experience, you can explore your research briefings using the standalone community-maintained companion web dashboard project at **[Last30DaysWeb](https://github.com/0xlazorr/Last30DaysWeb)**.
 
 ### Features
 * **Visual Clusters**: Renders Reddit/HN comments, YouTube transcript highlights, and insights in a structured card interface.
@@ -320,7 +320,7 @@ For a premium visual reading experience, you can explore your research briefings
 * **Interactive Coverage**: Visually breaks down source contribution via responsive doughnut charts.
 
 ### Integration
-The companion dashboard reads generated `.md` files matching `*.md` from your `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`). Make sure to save output files there so they are automatically listed in the dashboard sidebar.
+The companion dashboard reads generated `.md` files matching `*.md` from your `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`). Make sure to clone the companion repository, follow its README to install dependencies and start the Node.js server, and save your output files in the memory directory so they are automatically listed in the dashboard sidebar.
 
 ---
 

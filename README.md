@@ -119,12 +119,12 @@ What's in the file: badge, inline metadata line, the model's synthesis verbatim 
 
 For direct CLI use without the model in the loop, the engine also accepts `--synthesis-file PATH` to convert any markdown synthesis to HTML.
 
-### Standalone Web Dashboard (Companion Project)
+### Standalone Web Dashboard (Community-Maintained Companion Project)
 
-For a beautiful visual reading experience, you can explore your research briefings using the standalone companion web dashboard:
+For a beautiful visual reading experience, you can explore your research briefings using the standalone community-maintained companion web dashboard:
 *   **Repository**: [0xlazorr/Last30DaysWeb](https://github.com/0xlazorr/Last30DaysWeb)
 *   **Features**: Visual display of evidence clusters, Chart.js source coverage doughnut charts, interactive star ratings saved locally, and a browser-based console runner to initiate new research runs.
-*   **How to use**: Save reports to the directory where `LAST30DAYS_MEMORY_DIR` defaults to `~/Documents/Last30Days` (via the `--save-dir` flag or env variable) and start the local Node.js dashboard server to view them.
+*   **How to use**: Save reports to `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`) by using the `--save-dir` flag or setting the `LAST30DAYS_MEMORY_DIR` env variable, then start the local Node.js dashboard server to view them.
 
 ### Intelligent search: the killer feature
 
